@@ -1,16 +1,34 @@
-## Hi there 👋
+# Halo, Saya Sofian Hadi 👋
+### Fullstack Developer | Open Source Contributor
 
-<!--
-**avatarvisual-id/avatarvisual-id** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+---
 
-Here are some ideas to get you started:
+## 🚀 Tentang Saya
+Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital yang efisien. Saya senang membangun proyek yang bermanfaat bagi komunitas.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 🔭 **Proyek Saat Ini:** POJOK MERCHANDISE
+- 🌱 **Sedang Belajar:** JavaScript, Node.js, dan Database
+- 💬 **Tanya Saya:** Tentang Web Development dasar
+- 📫 **Kontak:** avatarvisual.id@gmail.com
+
+---
+
+## 🛠️ Tech Stack
+| Bidang | Teknologi |
+| :--- | :--- |
+| **Frontend** | HTML, CSS, JavaScript |
+| **Backend** | Node.js, Laravel |
+| **Tools** | Git, VS Code, GitHub |
+
+---
+
+## 📈 Statistik GitHub
+![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=avatarvisual-id&show_icons=true&theme=dark)
+
+---
+
+## 🤝 Mari Berkolaborasi
+Saya terbuka untuk proyek freelance atau kolaborasi belajar bersama. Silakan hubungi saya!
+
+---
+*Dibuat dengan ❤️ oleh Tujuhtitik.dev*
