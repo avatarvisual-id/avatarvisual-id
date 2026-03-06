@@ -20,16 +20,16 @@ Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital ya
 | **Tools** | Git, VS Code, GitHub |
 
 ---
-
 ## 📈 Statistik GitHub
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=avatarvisual-id&show_icons=true&theme=dark" alt="Statistik GitHub" />
+  <img src="https://github-readme-stats-one.vercel.app/api?username=avatarvisual-id&show_icons=true&theme=dark" alt="Statistik GitHub" />
 </p>
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=avatarvisual-id&layout=compact&theme=dark" alt="Bahasa Pemrograman Teratas" />
+  <img src="https://github-readme-stats-one.vercel.app/api/top-langs/?username=avatarvisual-id&layout=compact&theme=dark" alt="Bahasa Pemrograman Teratas" />
 </p>
+
 ---
 
 ## 🤝 Mari Berkolaborasi
