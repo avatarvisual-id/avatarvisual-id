@@ -32,10 +32,12 @@
         /* Portfolio Grid */
         .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
         .portfolio { padding: 80px 10%; background: #0f0f0f; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .work-card { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid #222; transition: 0.3s; }
         .work-card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .work-img { height: 200px; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: bold; }
+        .work-img-container { height: 200px; overflow: hidden; background: #222; display: flex; align-items: center; justify-content: center; }
+        .work-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .work-info { padding: 20px; }
 
         /* Pricing Calculator */
         .pricing { padding: 80px 10%; }
@@ -67,7 +69,7 @@
         <div class="logo">AVATARVISUAL.</div>
         <div class="nav-links">
             <a href="#portfolio">Portofolio</a>
-            <a href="#kalkulator">Kalkulator Harga</a>
+            <a href="#kalkulator">Kalkulator</a>
             <a href="mailto:avatarvisual.id@gmail.com">Kontak</a>
         </div>
     </nav>
@@ -82,26 +84,30 @@
         <h2 class="section-title">Karya Terpilih</h2>
         <div class="grid">
             <div class="work-card">
-                    <div class="work-img">LOGO PROJECT #1</div>
-                <div class="work-card">
-                <img src="G leaf logo.jfif" alt="Logo Design" style="width:100%; height:200px; object-fit:cover;">
-                    <div style="padding: 20px;">
+                <div class="work-img-container">
+                    <img src="G leaf logo.jfif" alt="Logo Design">
+                </div>
+                <div class="work-info">
                     <h4 style="color: var(--primary);">Brand Identity</h4>
                     <p style="font-size: 0.8rem; color: var(--gray);">Desain logo minimalis untuk brand lokal.</p>
-                    </div>
                 </div>
             </div>
-        </div>
+
             <div class="work-card">
-                <div class="work-img">UI DESIGN #1</div>
-                <div style="padding: 20px;">
+                <div class="work-img-container">
+                    <div style="color: #444; font-weight: bold;">UI DESIGN #1</div>
+                </div>
+                <div class="work-info">
                     <h4 style="color: var(--primary);">Mobile App Design</h4>
                     <p style="font-size: 0.8rem; color: var(--gray);">Clean & dark user interface for finance app.</p>
                 </div>
             </div>
+
             <div class="work-card">
-                <div class="work-img">BANNER PROJECT #1</div>
-                <div style="padding: 20px;">
+                <div class="work-img-container">
+                    <div style="color: #444; font-weight: bold;">BANNER PROJECT #1</div>
+                </div>
+                <div class="work-info">
                     <h4 style="color: var(--primary);">Social Media Kit</h4>
                     <p style="font-size: 0.8rem; color: var(--gray);">Engagement focused banners for Instagram.</p>
                 </div>
@@ -148,19 +154,16 @@
             const revisions = parseInt(document.getElementById('revision').value);
             const speedPrice = parseInt(document.getElementById('speed').value);
             
-            // Logika: Harga layanan + (revisi tambahan * 15rb) + Biaya Kecepatan
             const revCost = (revisions > 1) ? (revisions - 1) * 15000 : 0;
             const total = servicePrice + revCost + speedPrice;
             
             document.getElementById('total').innerText = "Rp " + total.toLocaleString('id-ID');
 
-            // Update WA Link
-            const phone = "6285156637400"; // GANTI DENGAN NOMOR WA KAMU
+            const phone = "6285156637400"; 
             const serviceName = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
             const text = `Halo AvatarVisual, saya ingin pesan layanan: ${serviceName} dengan estimasi harga ${document.getElementById('total').innerText}.`;
             document.getElementById('wa-btn').href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
         }
-        // Inisialisasi awal
         calculate();
     </script>
 </body>
