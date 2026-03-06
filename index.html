@@ -136,13 +136,13 @@
                 <option value="300000">Vector Illustration (Rp 300rb)</option>
             </select>
 
-            <label>Jumlah Revisi (Gratis 1, selanjutnya Rp 15rb/revisi)</label>
+            <label>Jumlah Revisi (Gratis 1, selanjutnya Rp 50rb/revisi)</label>
             <input type="number" id="revision" value="1" min="1" oninput="calculate()">
 
             <label>Lama Pengerjaan</label>
             <select id="speed" onchange="calculate()">
                 <option value="0">Reguler (3-5 Hari)</option>
-                <option value="50000">Kilat +Rp 50rb (24 Jam)</option>
+                <option value="100000">Kilat +Rp 100rb (24 Jam)</option>
             </select>
 
             <div class="result-display">
@@ -164,7 +164,7 @@
             const revisions = parseInt(document.getElementById('revision').value);
             const speedPrice = parseInt(document.getElementById('speed').value);
             
-            const revCost = (revisions > 1) ? (revisions - 1) * 15000 : 0;
+            const revCost = (revisions > 1) ? (revisions - 1) * 50000 : 0;
             const total = servicePrice + revCost + speedPrice;
             
             document.getElementById('total').innerText = "Rp " + total.toLocaleString('id-ID');
