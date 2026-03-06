@@ -23,11 +23,13 @@ Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital ya
 
 ## 📈 Statistik GitHub
 
-![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=avatarvisual-id&show_icons=true&theme=dark)
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=avatarvisual-id&show_icons=true&theme=dark" alt="Statistik GitHub" />
+</p>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=avatarvisual-id&layout=compact&theme=dark)
-
-
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=avatarvisual-id&layout=compact&theme=dark" alt="Bahasa Pemrograman Teratas" />
+</p>
 ---
 
 ## 🤝 Mari Berkolaborasi
