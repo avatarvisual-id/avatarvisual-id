@@ -54,6 +54,15 @@
         .btn-order { display: block; width: 100%; padding: 18px; background: var(--primary); color: black; text-decoration: none; border-radius: 12px; font-weight: 700; text-align: center; transition: 0.3s; }
         .btn-order:hover { background: #00cc6e; box-shadow: 0 0 20px rgba(0,255,136,0.3); }
 
+        /* Testimonials Section */
+        .testimonials { padding: 80px 10%; background: #0a0a0a; text-align: center; }
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .testi-card { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid #222; text-align: left; position: relative; }
+        .testi-card p { font-style: italic; color: #ccc; margin-bottom: 20px; font-size: 0.9rem; }
+        .testi-user { display: flex; align-items: center; gap: 10px; }
+        .user-info h5 { color: var(--primary); margin: 0; }
+        .user-info span { font-size: 0.7rem; color: var(--gray); }
+
         /* Footer */
         footer { padding: 50px 10%; text-align: center; border-top: 1px solid #222; color: var(--gray); font-size: 0.8rem; }
 
@@ -136,13 +145,13 @@
                 <option value="300000">Vector Illustration (Rp 300rb)</option>
             </select>
 
-            <label>Jumlah Revisi (Gratis 1, selanjutnya Rp 50rb/revisi)</label>
+            <label>Jumlah Revisi (Gratis 1, selanjutnya Rp 15rb/revisi)</label>
             <input type="number" id="revision" value="1" min="1" oninput="calculate()">
 
             <label>Lama Pengerjaan</label>
             <select id="speed" onchange="calculate()">
                 <option value="0">Reguler (3-5 Hari)</option>
-                <option value="100000">Kilat +Rp 100rb (24 Jam)</option>
+                <option value="50000">Kilat +Rp 50rb (24 Jam)</option>
             </select>
 
             <div class="result-display">
@@ -151,6 +160,39 @@
             </div>
 
             <a href="#" class="btn-order" id="wa-btn">Pesan Sekarang via WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">Apa Kata Klien?</h2>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <p>"Desain logo sangat memuaskan dan pengerjaannya cepat. AvatarVisual benar-benar paham keinginan saya."</p>
+                <div class="testi-user">
+                    <div class="user-info">
+                        <h5>Andi Pratama</h5>
+                        <span>CEO - TechIndo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <p>"UI/UX app yang dibuat sangat modern. User saya bilang aplikasinya jauh lebih mudah digunakan sekarang."</p>
+                <div class="testi-user">
+                    <div class="user-info">
+                        <h5>Sari Wijaya</h5>
+                        <span>Owner - BeautyApp</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <p>"Kalkulator harganya sangat membantu buat cek budget sebelum order. Transparan banget!"</p>
+                <div class="testi-user">
+                    <div class="user-info">
+                        <h5>Budi Santoso</h5>
+                        <span>Content Creator</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -164,7 +206,7 @@
             const revisions = parseInt(document.getElementById('revision').value);
             const speedPrice = parseInt(document.getElementById('speed').value);
             
-            const revCost = (revisions > 1) ? (revisions - 1) * 50000 : 0;
+            const revCost = (revisions > 1) ? (revisions - 1) * 15000 : 0;
             const total = servicePrice + revCost + speedPrice;
             
             document.getElementById('total').innerText = "Rp " + total.toLocaleString('id-ID');
