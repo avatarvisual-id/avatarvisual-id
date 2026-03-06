@@ -3,45 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AvatarVisual | sofian hadi</title>
+    <title>AvatarVisual | Professional Design Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; background-color: #121212; color: white; text-align: center; padding: 50px 20px; }
-        .card { background: #1e1e1e; padding: 30px; border-radius: 15px; max-width: 500px; margin: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #00ff88; }
-        select, input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
-        .result { font-size: 1.5rem; font-weight: bold; color: #00ff88; margin-top: 20px; }
-        .btn { display: block; background: #00ff88; color: black; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
+        :root {
+            --primary: #00ff88;
+            --bg: #0a0a0a;
+            --card: #141414;
+            --text: #ffffff;
+            --gray: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+        /* Navigation */
+        nav { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.9); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); letter-spacing: -1px; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 20px; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        header { padding: 100px 10%; text-align: center; }
+        header h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 20px; }
+        header span { color: var(--primary); }
+        header p { color: var(--gray); max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem; }
+
+        /* Portfolio Grid */
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+        .portfolio { padding: 80px 10%; background: #0f0f0f; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .work-card { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid #222; transition: 0.3s; }
+        .work-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .work-img { height: 200px; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: bold; }
+
+        /* Pricing Calculator */
+        .pricing { padding: 80px 10%; }
+        .calc-container { background: var(--card); max-width: 500px; margin: 0 auto; padding: 40px; border-radius: 24px; border: 1px solid #222; position: relative; }
+        .calc-container::before { content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: var(--primary); }
+        
+        label { display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--gray); }
+        select, input { width: 100%; padding: 15px; margin-bottom: 25px; border-radius: 10px; border: 1px solid #333; background: #1a1a1a; color: white; outline: none; transition: 0.3s; }
+        select:focus, input:focus { border-color: var(--primary); }
+
+        .result-display { background: #1a1a1a; padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 30px; }
+        .total-amount { display: block; font-size: 2.5rem; font-weight: 800; color: var(--primary); }
+
+        .btn-order { display: block; width: 100%; padding: 18px; background: var(--primary); color: black; text-decoration: none; border-radius: 12px; font-weight: 700; text-align: center; transition: 0.3s; }
+        .btn-order:hover { background: #00cc6e; box-shadow: 0 0 20px rgba(0,255,136,0.3); }
+
+        /* Footer */
+        footer { padding: 50px 10%; text-align: center; border-top: 1px solid #222; color: var(--gray); font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>AvatarVisual Price Calc</h1>
-        <p>Hitung estimasi biaya desain kamu di sini:</p>
-        
-        <label>Pilih Layanan:</label>
-        <select id="layanan" onchange="hitung()">
-            <option value="50000">Desain Logo Dasar (Rp 50rb)</option>
-            <option value="150000">Logo Professional (Rp 150rb)</option>
-            <option value="75000">Desain Banner (Rp 75rb)</option>
-            <option value="200000">UI/UX Design (Rp 200rb)</option>
-        </select>
+    <nav>
+        <div class="logo">AVATARVISUAL.</div>
+        <div class="nav-links">
+            <a href="#portfolio">Portofolio</a>
+            <a href="#kalkulator">Kalkulator Harga</a>
+            <a href="mailto:avatarvisual.id@gmail.com">Kontak</a>
+        </div>
+    </nav>
 
-        <label>Jumlah Revisi:</label>
-        <input type="number" id="revisi" value="1" min="1" oninput="hitung()">
+    <header>
+        <h1>Ubah Ide Menjadi <span>Visual Digital.</span></h1>
+        <p>Layanan desain profesional untuk brand, logo, dan antarmuka aplikasi. Fokus pada estetika dan fungsionalitas.</p>
+        <a href="#kalkulator" style="color: var(--primary); text-decoration: none; font-weight: 600;">Lihat Estimasi Biaya →</a>
+    </header>
 
-        <div class="result" id="total">Total: Rp 50.000</div>
-        
-        <a href="https://wa.me/MASUKKAN_NOMOR_WA_MU" class="btn">Pesan via WhatsApp</a>
-    </div>
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Karya Terpilih</h2>
+        <div class="grid">
+            <div class="work-card">
+                <div class="work-img">LOGO PROJECT #1</div>
+                <div style="padding: 20px;">
+                    <h4 style="color: var(--primary);">Brand Identity</h4>
+                    <p style="font-size: 0.8rem; color: var(--gray);">Minimalist logo design for tech startup.</p>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-img">UI DESIGN #1</div>
+                <div style="padding: 20px;">
+                    <h4 style="color: var(--primary);">Mobile App Design</h4>
+                    <p style="font-size: 0.8rem; color: var(--gray);">Clean & dark user interface for finance app.</p>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-img">BANNER PROJECT #1</div>
+                <div style="padding: 20px;">
+                    <h4 style="color: var(--primary);">Social Media Kit</h4>
+                    <p style="font-size: 0.8rem; color: var(--gray);">Engagement focused banners for Instagram.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="kalkulator">
+        <h2 class="section-title">Kalkulator Biaya Jasa</h2>
+        <div class="calc-container">
+            <label>Pilih Jenis Layanan</label>
+            <select id="service" onchange="calculate()">
+                <option value="150000">Desain Logo Professional (Rp 150rb)</option>
+                <option value="75000">Social Media Post (Rp 75rb)</option>
+                <option value="350000">UI/UX Landing Page (Rp 350rb)</option>
+                <option value="100000">Vector Illustration (Rp 100rb)</option>
+            </select>
+
+            <label>Jumlah Revisi (Gratis 1, selanjutnya Rp 15rb/revisi)</label>
+            <input type="number" id="revision" value="1" min="1" oninput="calculate()">
+
+            <label>Lama Pengerjaan</label>
+            <select id="speed" onchange="calculate()">
+                <option value="0">Reguler (3-5 Hari)</option>
+                <option value="50000">Kilat +Rp 50rb (24 Jam)</option>
+            </select>
+
+            <div class="result-display">
+                <span class="total-label">Estimasi Total Biaya:</span>
+                <span class="total-amount" id="total">Rp 150.000</span>
+            </div>
+
+            <a href="#" class="btn-order" id="wa-btn">Pesan Sekarang via WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AvatarVisual - Created by sofian hadi. All rights reserved.</p>
+    </footer>
 
     <script>
-        function hitung() {
-            let hargaLayanan = document.getElementById('layanan').value;
-            let jumlahRevisi = document.getElementById('revisi').value;
-            let total = parseInt(hargaLayanan) + (parseInt(jumlahRevisi - 1) * 10000);
-            document.getElementById('total').innerText = "Total: Rp " + total.toLocaleString('id-ID');
+        function calculate() {
+            const servicePrice = parseInt(document.getElementById('service').value);
+            const revisions = parseInt(document.getElementById('revision').value);
+            const speedPrice = parseInt(document.getElementById('speed').value);
+            
+            // Logika: Harga layanan + (revisi tambahan * 15rb) + Biaya Kecepatan
+            const revCost = (revisions > 1) ? (revisions - 1) * 15000 : 0;
+            const total = servicePrice + revCost + speedPrice;
+            
+            document.getElementById('total').innerText = "Rp " + total.toLocaleString('id-ID');
+
+            // Update WA Link
+            const phone = "6297731706724"; // GANTI DENGAN NOMOR WA KAMU
+            const serviceName = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+            const text = `Halo AvatarVisual, saya ingin pesan layanan: ${serviceName} dengan estimasi harga ${document.getElementById('total').innerText}.`;
+            document.getElementById('wa-btn').href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
         }
+        // Inisialisasi awal
+        calculate();
     </script>
 </body>
 </html>
