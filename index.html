@@ -3,53 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | sofian hadi</title>
+    <title>AvatarVisual | sofian hadi</title>
     <style>
-        /* Gaya Sederhana agar Web Terlihat Profesional */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            border: 2px solid #333;
-            padding: 2rem;
-            border-radius: 15px;
-            background: #252525;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h1 { color: #00ff88; margin-bottom: 0.5rem; }
-        p { color: #ccc; line-height: 1.6; }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #00ff88;
-            color: #1a1a1a;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn:hover { background-color: #00cc6e; transform: scale(1.05); }
+        body { font-family: sans-serif; background-color: #121212; color: white; text-align: center; padding: 50px 20px; }
+        .card { background: #1e1e1e; padding: 30px; border-radius: 15px; max-width: 500px; margin: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #00ff88; }
+        select, input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        .result { font-size: 1.5rem; font-weight: bold; color: #00ff88; margin-top: 20px; }
+        .btn { display: block; background: #00ff88; color: black; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Halo, Saya sofian hadi</h1>
-        <p>Selamat datang di proyek pertama saya di GitHub.<br>
-        Saya seorang pengembang yang fokus pada solusi kreatif dan kode yang bersih.</p>
+    <div class="card">
+        <h1>AvatarVisual Price Calc</h1>
+        <p>Hitung estimasi biaya desain kamu di sini:</p>
         
-        <a href="mailto:emailmu@gmail.com" class="btn">Hubungi Saya</a>
+        <label>Pilih Layanan:</label>
+        <select id="layanan" onchange="hitung()">
+            <option value="50000">Desain Logo Dasar (Rp 50rb)</option>
+            <option value="150000">Logo Professional (Rp 150rb)</option>
+            <option value="75000">Desain Banner (Rp 75rb)</option>
+            <option value="200000">UI/UX Design (Rp 200rb)</option>
+        </select>
+
+        <label>Jumlah Revisi:</label>
+        <input type="number" id="revisi" value="1" min="1" oninput="hitung()">
+
+        <div class="result" id="total">Total: Rp 50.000</div>
+        
+        <a href="https://wa.me/MASUKKAN_NOMOR_WA_MU" class="btn">Pesan via WhatsApp</a>
     </div>
 
+    <script>
+        function hitung() {
+            let hargaLayanan = document.getElementById('layanan').value;
+            let jumlahRevisi = document.getElementById('revisi').value;
+            let total = parseInt(hargaLayanan) + (parseInt(jumlahRevisi - 1) * 10000);
+            document.getElementById('total').innerText = "Total: Rp " + total.toLocaleString('id-ID');
+        }
+    </script>
 </body>
 </html>
