@@ -1,14 +1,14 @@
-# Halo, Saya Sofian Hadi 👋
-### Fullstack Developer | Open Source Contributor
+# Halo, Saya sofian hadi 👋
+### Fullstack Developer | Creative Coder
 
 ---
 
 ## 🚀 Tentang Saya
-Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital yang efisien. Saya senang membangun proyek yang bermanfaat bagi komunitas.
+Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital yang efisien dan kreatif.
 
-- 🔭 **Proyek Saat Ini:** POJOK MERCHANDISE
-- 🌱 **Sedang Belajar:** JavaScript, Node.js, dan Database
-- 💬 **Tanya Saya:** Tentang Web Development dasar
+- 🔭 **Proyek Saat Ini:** Sedang merapikan profil GitHub
+- 🌱 **Sedang Belajar:** JavaScript dan Pengembangan Web
+- 💬 **Tanya Saya:** Tentang desain grafis atau coding dasar
 - 📫 **Kontak:** avatarvisual.id@gmail.com
 
 ---
@@ -17,13 +17,13 @@ Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital ya
 | Bidang | Teknologi |
 | :--- | :--- |
 | **Frontend** | HTML, CSS, JavaScript |
-| **Backend** | Node.js, Laravel |
 | **Tools** | Git, VS Code, GitHub |
 
 ---
 
 ## 📈 Statistik GitHub
 ![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=avatarvisual-id&show_icons=true&theme=dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=avatarvisual-id&layout=compact&theme=dark)
 
 ---
 
@@ -31,4 +31,4 @@ Saya adalah seorang pengembang perangkat lunak yang fokus pada solusi digital ya
 Saya terbuka untuk proyek freelance atau kolaborasi belajar bersama. Silakan hubungi saya!
 
 ---
-*Dibuat dengan ❤️ oleh Tujuhtitik.dev*
+*Dibuat dengan ❤️ oleh sofian hadi*
