@@ -82,15 +82,16 @@
         <h2 class="section-title">Karya Terpilih</h2>
         <div class="grid">
             <div class="work-card">
-    <div class="work-card">
-    <img src="G leaf logo.jfif" alt="Logo Design" style="width:100%; height:200px; object-fit:cover;">
-    <div style="padding: 20px;">
-        <h4 style="color: var(--primary);">Brand Identity</h4>
-        <p style="font-size: 0.8rem; color: var(--gray);">Desain logo minimalis untuk brand lokal.</p>
-    </div>
-</div>
-
-
+                    <div class="work-img">LOGO PROJECT #1</div>
+                <div class="work-card">
+                <img src="G leaf logo.jfif" alt="Logo Design" style="width:100%; height:200px; object-fit:cover;">
+                    <div style="padding: 20px;">
+                    <h4 style="color: var(--primary);">Brand Identity</h4>
+                    <p style="font-size: 0.8rem; color: var(--gray);">Desain logo minimalis untuk brand lokal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="work-card">
                 <div class="work-img">UI DESIGN #1</div>
                 <div style="padding: 20px;">
@@ -113,10 +114,10 @@
         <div class="calc-container">
             <label>Pilih Jenis Layanan</label>
             <select id="service" onchange="calculate()">
-                <option value="150000">Desain Logo Professional (Rp 150rb)</option>
-                <option value="75000">Social Media Post (Rp 75rb)</option>
-                <option value="350000">UI/UX Landing Page (Rp 350rb)</option>
-                <option value="100000">Vector Illustration (Rp 100rb)</option>
+                <option value="200000">Desain Logo Professional (Rp 200rb)</option>
+                <option value="150000">Social Media Post (Rp 150rb)</option>
+                <option value="500000">UI/UX Landing Page (Rp 500rb)</option>
+                <option value="300000">Vector Illustration (Rp 300rb)</option>
             </select>
 
             <label>Jumlah Revisi (Gratis 1, selanjutnya Rp 15rb/revisi)</label>
@@ -130,7 +131,7 @@
 
             <div class="result-display">
                 <span class="total-label">Estimasi Total Biaya:</span>
-                <span class="total-amount" id="total">Rp 150.000</span>
+                <span class="total-amount" id="total">Rp 200.000</span>
             </div>
 
             <a href="#" class="btn-order" id="wa-btn">Pesan Sekarang via WhatsApp</a>
@@ -154,7 +155,7 @@
             document.getElementById('total').innerText = "Rp " + total.toLocaleString('id-ID');
 
             // Update WA Link
-            const phone = "6297731706724"; // GANTI DENGAN NOMOR WA KAMU
+            const phone = "6285156637400"; // GANTI DENGAN NOMOR WA KAMU
             const serviceName = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
             const text = `Halo AvatarVisual, saya ingin pesan layanan: ${serviceName} dengan estimasi harga ${document.getElementById('total').innerText}.`;
             document.getElementById('wa-btn').href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
